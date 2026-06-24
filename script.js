@@ -3,10 +3,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize AOS (Animate On Scroll)
     if (typeof AOS !== 'undefined') {
         AOS.init({
-            duration: 800,
-            offset: 100,
-            once: false,
-            easing: 'ease-out-cubic'
+            duration: 500, // Snappier animations
+            offset: 80,
+            once: true, // Animates only once to prevent scrolling lag
+            disable: 'mobile', // Disable on mobile devices for smooth native scroll performance
+            disableMutationObserver: true // Avoid mutation observer performance overhead
         });
     }
 
