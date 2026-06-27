@@ -565,8 +565,8 @@ img {
   /* Allow image hover interactions */
   transition: var(--transition-smooth);
   opacity: 0;
-  animation: heroRiseUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  animation-delay: 0.1s;
+  animation: heroRiseUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0s;
 }
 
 .hero-photo:hover {
