@@ -1,13 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // Initialize AOS (Animate On Scroll)
+    // Initialize AOS (Animate On Scroll) after full page load to avoid forced reflows
     if (typeof AOS !== 'undefined') {
-        AOS.init({
-            duration: 500, // Snappier animations
-            offset: 80,
-            once: true, // Animates only once to prevent scrolling lag
-            disable: false, // Enabled on mobile as requested
-            disableMutationObserver: true // Avoid mutation observer performance overhead
+        window.addEventListener('load', () => {
+            AOS.init({
+                duration: 500, // Snappier animations
+                offset: 80,
+                once: true, // Animates only once to prevent scrolling lag
+                disable: false, // Enabled on mobile as requested
+                disableMutationObserver: true // Avoid mutation observer performance overhead
+            });
         });
     }
 
